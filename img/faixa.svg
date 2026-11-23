@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 1931 383" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:affinity="https://www.affinity.studio/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(1,0,0,1,-2560,-4539)">
+        <g id="Prancheta7" transform="matrix(1,0,0,0.723306,-0,1255.19156)">
+            <rect x="2560" y="4540" width="1930.869" height="529.2" style="fill:none;"/>
+            <clipPath id="_clip1">
+                <rect x="2560" y="4540" width="1930.869" height="529.2"/>
+            </clipPath>
+            <g clip-path="url(#_clip1)">
+                <g transform="matrix(1,0,0,1.382541,0,-1735.353868)">
+                    <path d="M2560,4772.608L2560,4540L4490.869,4540L4490.869,4777.865C4410.366,4780.526 4408.017,4771.354 4335,4801.523C4236.59,4842.184 4168.864,4877.959 4000.995,4838.324C3792.174,4789.021 3654.398,4925.734 3539.749,4919.813C3354.499,4910.245 3371.785,4768.901 2957.625,4840.953C2726.771,4881.115 2629.101,4791.642 2560,4772.608Z" style="fill:rgb(145,176,95);"/>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

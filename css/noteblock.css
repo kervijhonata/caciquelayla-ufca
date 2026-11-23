@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap");
+
+/* O componente preenche o container (#bloco-historia). O tamanho vem dele. */
+.notepad {
+  --paper: #e3d6ab;
+  --paper-back: #d4c48a;
+  --ink: #4a2a08;
+  --btn: #234012;
+  --btn-ink: #f1ead0;
+  --focus: #e8b800;
+  --fold: 38px;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+.notepad *, .notepad *::before, .notepad *::after { box-sizing: border-box; }
+
+.notepad__back {
+  position: absolute;
+  inset: 10px 18px 36px 0;
+  background: var(--paper-back);
+  box-shadow: 0 2px 6px rgb(0 0 0 / .25);
+}
+.notepad__stack { position: absolute; inset: 0 0 28px 14px; }
+
+.notepad .note {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  background: var(--paper);
+  box-shadow: 0 6px 14px rgb(0 0 0 / .3);
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - var(--fold)), calc(100% - var(--fold)) 100%, 0 100%);
+  will-change: transform, opacity;
+}
+.notepad .note::after {
+  content: "";
+  position: absolute;
+  right: 0; bottom: 0;
+  width: var(--fold); height: var(--fold);
+  background: linear-gradient(315deg, transparent 50%, var(--paper-back) 50%);
+}
+.notepad .note__text {
+  flex: 1;
+  margin: 22px 22px 56px;
+  overflow: hidden;
+  font-family: var(--font-folhas), "Segoe Print", "Comic Sans MS", cursive;
+  font-size: 30px;
+  line-height: 1.12;
+  color: var(--ink);
+  letter-spacing: .01em;
+  overflow-wrap: anywhere;
+}
+.notepad__count {
+  position: absolute;
+  left: 0; right: 0; bottom: 52px;
+  text-align: center;
+  font: 12px system-ui, sans-serif;
+  color: var(--ink);
+  opacity: .55;
+  pointer-events: none;
+  z-index: 5;
+}
+.notepad__controls {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  display: flex; justify-content: center; gap: 14px;
+  z-index: 5;
+}
+.notepad__btn {
+  width: 38px; height: 38px;
+  padding: 0;
+  border: 0; border-radius: 50%;
+  background: var(--btn); color: var(--btn-ink);
+  display: grid; place-items: center;
+  cursor: pointer;
+  box-shadow: 0 3px 6px rgb(0 0 0 / .4);
+  transition: transform .12s, opacity .2s;
+}
+.notepad__btn:active { transform: scale(.92); }
+.notepad__btn:disabled { opacity: .35; cursor: default; }
+.notepad__btn:focus-visible,
+.notepad:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+.notepad__btn svg { width: 18px; height: 18px; fill: currentColor; }
+.notepad__btn .i-stop { display: none; }
+.notepad__btn[aria-pressed="true"] .i-play { display: none; }
+.notepad__btn[aria-pressed="true"] .i-stop { display: block; }
+.notepad .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
