@@ -1,0 +1,12 @@
+{"skeleton":{"images":""},
+"bones":[{"name":"root"}],
+"slots":[
+	{"name":"fatia1","bone":"root","attachment":"fatia1"}
+],
+"skins":{
+	"default":{
+		"fatia1":{"fatia1":{"x":450,"y":787,"width":900,"height":162}}
+	}
+},
+"animations":{"animation":{}}
+}

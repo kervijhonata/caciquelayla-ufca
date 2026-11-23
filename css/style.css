@@ -14,16 +14,20 @@
     --cinza-1: #EBEBEB;
     --cinza-2: #d9d9d9;
     --marrom-1: #5C3407;
+    --marrom-2: #704d10;
     --branco: #ffffff;
+
 
 
     /* Paleta */
     --bg-primario: ;
-    --header-bg-color: var(--amarelo-1);
+    --header-bg-color: var(--marrom-2);
     --bg-tela: var(--cinza-1);
     --bg-folhas: var(--amarelo-2);
     --text-color-folhas: var(--marrom-1);
     --font-folhas: "Covered By Your Grace", cursive;
+    --cartao-bg-color: var(--marrom-2);
+    --cartao-layla-bg-color: var(--amarelo-2);
 
 }
 
@@ -36,6 +40,12 @@
     to {
         transform: translateY(inherit);
     }
+}
+
+html {
+    -webkit-scroll-behavior: smooth;
+    -moz-scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 html, body, * {
@@ -54,6 +64,15 @@ header {
     box-sizing: border-box;
     align-items: center;
     background-color: var(--header-bg-color);
+    background-image: url("/img/padrao-geometrico.svg");
+    background-repeat: repeat;
+    background-size: auto 100%;
+    box-shadow: inset 0 6px 0 var(--marrom-1);
+    border-bottom: 6pt solid var(--marrom-1);
+
+    #logo {
+        filter: invert();
+    }
 
     nav {
         ul {
@@ -84,7 +103,7 @@ header {
         padding: .5rem 2rem;
         border-radius: 9999px;
         border: none;
-        background-color: var(--verde-3);
+        background-color: var(--verde-1);
         color: var(--amarelo-2-bright);
         font-size: 14pt;
         font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -145,12 +164,13 @@ main {
         display: grid;
         grid-template-columns: 9fr 3fr;
         gap: 2rem;
+        justify-items: center;
 
         #bloco-historia {
-            width: 100%;
+            width: 80%;
             p.folha {
                 background-color: var(--bg-folhas);
-                width: 90%;
+                width: 100%;
                 height: 100%;
                 padding: 1rem;
                 color: var(--text-color-folhas);
@@ -168,7 +188,7 @@ main {
             align-items: center;
             
             .conteiner-imagem {  
-                background-color: var(--bg-folhas);
+                background-color: var(--cartao-layla-bg-color);
                 display: flex;
                 align-items: center;
                 flex-flow: column nowrap;
@@ -190,7 +210,7 @@ main {
                 justify-content: center;
                 align-items: center;
                 font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-                background-color: var(--amarelo-1);
+                background-color: var(--cartao-layla-bg-color);
                 color: #000000;
                 font-size: 16pt;
                 letter-spacing: .25rem;
@@ -209,11 +229,16 @@ main {
             justify-content: center;
             align-items: center;
             font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-            background-color: var(--amarelo-1);
-            color: #000000;
+            background-color: var(--cartao-bg-color);
+            color: var(--amarelo-2);
             font-size: 16pt;
             letter-spacing: .25rem;
-            height: 80px;
+            height: 120px;
+            background-position: center;
+            background-size: cover;
+            background-color: var(--marrom-1);
+            background-image: url('/img/fundo-placa.jpg');
+            background-blend-mode: overlay;
         }
 
         .personagens {
@@ -223,15 +248,15 @@ main {
             padding: 2rem 8rem;
             box-sizing: border-box;
             gap: 2rem;
-            
 
             .personagem {
                 width: 100%;
                 aspect-ratio: 1/1.2;
-                background-color: var(--amarelo-1);
+                background-color: var(--cartao-bg-color);
                 box-sizing: border-box;
                 padding: .5rem;
                 box-shadow: 6px 6px 8px rgba(136, 127, 84, 0.4);
+                border-radius: 0.25rem;
 
                 .conteiner-imagem {
                     width: 100%;
@@ -248,6 +273,7 @@ main {
                     font-family: "Cascadia Mono", monospace;
                     font-weight: bold;
                     text-transform: uppercase;
+                    color: var(--amarelo-2);
                 }
             }
         }

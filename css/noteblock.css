@@ -32,6 +32,10 @@
   box-shadow: 0 6px 14px rgb(0 0 0 / .3);
   clip-path: polygon(0 0, 100% 0, 100% calc(100% - var(--fold)), calc(100% - var(--fold)) 100%, 0 100%);
   will-change: transform, opacity;
+  justify-content: center;
+  align-items: center;
+  padding: 4%;
+  box-sizing: border-box;
 }
 .notepad .note::after {
   content: "";

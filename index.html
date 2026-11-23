@@ -9,10 +9,10 @@
 </head>
 <body>
     <header>
-        <img src="img/logo.svg" alt="" width="64" height="64">
+        <img src="img/logo.svg" id="logo" alt="" width="64" height="64">
         <nav>
             <ul>
-                <li><a href="">A origem</a></li>
+                <li><a href="#bloco-historia">A origem</a></li>
                 <li><a href="">Quem somos</a></li>
                 <li><a href="">A UFCA</a></li>
             </ul>
@@ -31,7 +31,7 @@
                     <img src="img/layla.jpg" alt="Cacique Layla de Maranguape">
                 </div>
                 <div class="info">
-                    <h2>DESAPARECIDA</h2>
+                    <h2>A GUERREIRA</h2>
                 </div>
             </div>
         </section>
@@ -79,7 +79,7 @@
             </div>
             <div class="cta-conteiner">
                 <span>Clique para jogar</span>
-                <button>VAMOS ENCONTRÁ-LA!</button>
+                <button>VAMOS BATALHAR!</button>
             </div>
             <div class="img-conteiner" id="faixa-baixo">
                 <img src="img/faixa-baixo.svg" alt="">
@@ -88,12 +88,12 @@
         <section id="paralaxe-fundo">
             <div class="vinheta"></div>
             <div class="cena">
-                <img src="img/fita.svg" class="camada" alt="" style="--x:0; --y:4;  --s:0.12; --r:-22; --b:4;">
-                <img src="img/fita.svg" class="camada" alt="" style="--x:0; --y:13; --s:0.3;  --r:14;  --b:2.5;">
-                <img src="img/fita.svg" class="camada" alt="" style="--x:0; --y:22; --s:0.55; --r:-28; --b:1;">
-                <img src="img/fita.svg" class="camada" alt="" style="--x:0; --y:33; --s:0.9;  --r:20;  --b:0;">
-                <img src="img/fita.svg" class="camada" alt="" style="--x:0; --y:44; --s:1.4;  --r:-12; --b:0;">
-                <img src="img/fita.svg" class="camada" alt="" style="--x:0; --y:55; --s:1.8;  --r:26;  --b:3;">
+                <img src="img/cipo-1.svg" class="camada" alt="" style="--x:0; --y:4;  --s:0.12; --r:-22; --b:4;">
+                <img src="img/cipo-3.svg" class="camada" alt="" style="--x:0; --y:13; --s:0.3;  --r:14;  --b:0.2;">
+                <img src="img/cipo-2.svg" class="camada" alt="" style="--x:0; --y:22; --s:0.55; --r:-28; --b:1;">
+                <img src="img/cipo-3.svg" class="camada" alt="" style="--x:0; --y:33; --s:0.9;  --r:20;  --b:0;">
+                <img src="img/cipo-1.svg" class="camada" alt="" style="--x:0; --y:44; --s:1.4;  --r:-12; --b:0;">
+                <!-- <img src="img/cipo-2.svg" class="camada" alt="" style="--x:0; --y:55; --s:1.8;  --r:26;  --b:3;"> -->
             </div>
         </section>
     </main>
@@ -111,11 +111,15 @@
     <script src="js/noteblock.js"></script>
     <script src="js/parallax.js"></script>
     <script>
+        const texto = [
+            "Em 3 de abril de 1649, cinco embarcações holandesas comandadas por Matias Beck, fundador de Fortaleza com o Forte Schoonenborch no riacho Pajeú, atracaram no Mucuripe e avançaram Mata Atlântica adentro rumo a Maranguape, o vale da batalha. Às margens da Cascatinha do riacho Gavião, a cacique potiguara Laíla, descendente de Maranguab, selou aliança com os recém-chegados contra tribos rivais tapuias e tapebas. Guiado por ela à ponta da serra, o ourives ibérico Jonas descobriu a mina de prata, guarnecida por um fortim no monte Itarema para suprir o forte costeiro, enquanto lavouras de mandioca e milho floresciam pelo vale.",
+            "Séculos depois, na Segunda Guerra Mundial, tropas americanas no Pici, navios torpedeados e o clima bélico — suavizado pelas festas “for all” que originaram o forró — levaram famílias a buscar refúgio na serra. Iniciada nos negócios pelo cunhado Jaime Neves, Nair Barbosa Vieira venceu concorrência militar para produzir fardamentos com o talento das costureiras maranguapenses. Encantada pela região, comprou em 1942, em nome da irmã Philomena, o sítio Cascatinha, onde ecoava o amor de Laíla e Jonas, separados em 1654, e o encanto da cacique na Pedra das Correntes, cuja silhueta repousa desenhada na montanha.",
+            "Em junho de 1963, persuadida por sobrinhos e amigos, Nair transformou a propriedade em um condomínio clubístico serrano, fundado entre os dias de Santo Antônio e São João sob presidência de Fernando César Vieira Diógenes, com apoio de José Barreira Fontenele, Alexandre Dúlio, Edilson Pinheiro, Sérgio Diógenes e o bar de Raimundo Nonato de Figueiredo, do Tabajara. Reunindo os sítios Gavião, Cascatinha de Laíla e Boa Vista em mais de 180 mil m² de Mata Atlântica e nascentes do riacho Gavião, o clube nasceu numa Maranguape pujante, pioneira em telefonia, rodovia, ferrovias e no hotel Balneário Pirapora Pálace.",
+            "Ao longo de mais de cinco décadas e seis logomarcas, do vermelho socialista ao verde nos tempos de repressão, o clube superou o deslizamento de 1974 com piscinas tratadas, chalés e o Cascatinha Acqua Play, evoluindo ao Cascatinha Park Hotel com Maria Odete na diretoria desde 1978 nos jubileus de 1988 e 2013. Ainda assim, cada água e trilha preservada guarda a alma de Laíla, cujo amor com Jonas até 1654 e os filhos na aldeia Pitaguary ecoam até o cume onde, acorrentada pelos portugueses na Pedra das Correntes, deixou apenas correntes intactas e encantou-se na natureza, revelando seu corpo deitado no desenho da serra."
+        ]
         const bloco = new NoteBlock(
             document.getElementById("bloco-historia"),
-            ["Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam, rem! Aliquid ducimus nisi impedit, et sapiente est. Minus repellendus, sint fuga rem quam nulla, molestias exercitationem assumenda aspernatur ex neque.",
-            "adipisicing elit. Quod voluptas ab temporibus labore sit ut veritatis delectus dolorem, pariatur dicta aliquid nihil at, quae nulla dignissimos iste similique ipsam cumque!...",
-            "Terceiro texto..."]
+            [texto[0], texto[1], texto[2], texto[3],]
         );
     </script>
 </body>
