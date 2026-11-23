@@ -64,7 +64,7 @@ header {
     box-sizing: border-box;
     align-items: center;
     background-color: var(--header-bg-color);
-    background-image: url("/img/padrao-geometrico.svg");
+    background-image: url("../img/padrao-geometrico.svg");
     background-repeat: repeat;
     background-size: auto 100%;
     box-shadow: inset 0 6px 0 var(--marrom-1);
@@ -147,7 +147,7 @@ main {
             background-position: center;
             background-size: cover;
             background-color: var(--marrom-1);
-            background-image: url('/img/fundo-placa.jpg');
+            background-image: url('../img/fundo-placa.jpg');
             background-blend-mode: overlay;
         }
         h2 {
@@ -237,7 +237,7 @@ main {
             background-position: center;
             background-size: cover;
             background-color: var(--marrom-1);
-            background-image: url('/img/fundo-placa.jpg');
+            background-image: url('../img/fundo-placa.jpg');
             background-blend-mode: overlay;
         }
 
