@@ -8,6 +8,7 @@
     --verde-3: #31581B;
     --verde-3-bright: #449a13;
     --verde-4: #91B05F;
+    --verde-5: #4c684a;
     --amarelo-1: #FAD416;
     --amarelo-2: #E0D4B0;
     --amarelo-2-bright: #f8d260;
@@ -119,7 +120,6 @@ header {
 
 main {
     .tela {
-        /* background-color: var(--bg-tela); */
         width: 100%;
         height: 100vh;
         padding: 4rem;
@@ -157,7 +157,8 @@ main {
             /* transform: translateY(-100%); */
             font-size: 20pt;
             letter-spacing: .10rem;
-            text-shadow: 0 0 12px #fff;
+            text-shadow: 0 0 12px var(--verde-3);
+            color: var(--amarelo-2)
         }
     }
 
@@ -264,8 +265,13 @@ main {
                 background-color: var(--cartao-bg-color);
                 box-sizing: border-box;
                 padding: .5rem;
-                box-shadow: 6px 6px 8px rgba(136, 127, 84, 0.4);
+                box-shadow: 6px 6px 8px var(--verde-3);
                 border-radius: 0.25rem;
+                transition: ease-in-out .5s;
+
+                &:hover {
+                    transform: scale(1.12);
+                }
 
                 .conteiner-imagem {
                     width: 100%;
@@ -299,7 +305,8 @@ main {
 
     #tela-animacao {
         padding: 0;
-        background: linear-gradient(to bottom, var(--cinza-1), var(--cinza-1), var(--verde-4));
+        /* background: linear-gradient(to bottom, var(--verde-5), var(--verde-5), var(--verde-4)); */
+        background: linear-gradient(to bottom, transparent, transparent, var(--verde-4));
 
         video {
             width: 100%;
@@ -313,6 +320,7 @@ main {
         box-sizing: border-box;
         display: grid;
         grid-template-rows: 2fr 8fr 2fr;
+        background-color: #d9d9d9;
 
         /* * {
             z-index: 2;
@@ -400,14 +408,15 @@ footer {
     height: 480vh;
     box-sizing: border-box;
     pointer-events: none;
-    background-color: var(--bg-tela);
+    /* background-color: var(--bg-tela); */
+    background-color: var(--verde-5);
     overflow: hidden;
     
     .vinheta {
         position: absolute;
         width: 100%;
         height: 100%;
-        box-shadow: 0 0 200px rgba(0,0,0,0.5) inset;
+        box-shadow: 0 0 200px var(--verde-3) inset;
     }
 
     .cena {
